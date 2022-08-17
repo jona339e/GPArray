@@ -2,11 +2,15 @@
 {
     class Program
     {
+        //Array med detaljer om arangements i text format
         static string[] arrangements = new string[100];
+        //MultidimensionalArray med 1000 arrays der hvert kan indeholde 2 elementer
         static int[,] tickets = new int[1000, 2];
         static void Main(string[] args)
         {
-            Console.WriteLine(tickets.Length);
+            Console.WriteLine(tickets.Length); //Her ses længden af hele arrayet som svare til 2000,
+                                               //for kun at få et af array's skal man bruge .getlength(i)
+                                               //hvor i er indexet for det array.length man vil finde.
             AddToArray();
             while (true)
             {
@@ -60,6 +64,11 @@
             }
         }
 
+
+        /// <summary>
+        /// BuyTicket adds to ticketarray the number of tickets and the arrangement
+        /// </summary>
+        /// <returns>int next free spot</returns>
         static int BuyTicket()
         {
             Console.Write("Indtast nummer op arrangement du ønsker at købe billet på: ");
